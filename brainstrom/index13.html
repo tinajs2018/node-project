@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fuctions</title>
+</head>
+<style>
+body{
+    background-color: aqua;
+}
+#btn{
+    margin-left: 120px;
+}
+
+
+</style>
+<body>
+<button id="btn">Click me</button>
+
+
+    
+   <script>
+
+function add(a,b){
+    return a+b;
+}
+console.log(window.add);
+let sum=add;
+function average(a,b,fn){
+    return fn(a,b)/2
+}
+
+let result=average(10,20 ,sum );
+console.log(result);
+function compareBY(propName){
+    return function(a,b){
+        let x=a[propName],
+        y=b[propName];
+        if(x>y){
+            return 1;
+        }else if(x<y) {
+            return-1
+        }else{
+            return 0;
+        }
+    }
+}
+let products=[
+    {name:'iphone' ,price:900},
+    {name:'samsung', price:850},
+    {name:'sony xperial', price:700}
+]
+console.log('products sorted by name:');
+products.sort(compareBY('name'));
+console.table(products);
+function cmToln(lenght){
+    return lenght/2.54;
+}
+function  intoCm(lenght){
+    return lenght*2.54;
+}
+function convert(fn ,lenght){
+    return fn (lenght)
+}
+let inches=convert(cmToln,10);
+console.log(inches);
+let centi=convert(intoCm ,3.97)
+console.log(centi)
+let animation=(function(a,b){
+    return a*b
+})(13,89)
+console.log(animation);
+let candy=(function(len){
+    return len/1000
+})(54)
+console.log(candy);
+
+(function(){
+    var counter=0;
+    function addf(a,b){
+        return a+b
+    }
+    console.log(addf(1,2))
+})();
+
+
+let cal=(function(){
+    function sum1( y,z){
+        return z+y
+    }
+    function mutiply(y,z){
+        return z*y
+    }
+    function divide(y,z){
+        return y/z
+    }
+
+})();
+
+//callback fuction
+let numbers=[1,2,3,4,5,6,7];
+function isOddNumber(number){
+    return number %2;
+}
+const oddNumbers=numbers.filter(isOddNumber);
+console.log(oddNumbers);
+
+function btnClicked(){
+    
+}
+let btn=document.querySelector('#btn');
+btn.addEventListener('clicked', btnClicked);
+//passing value of primitive values
+function square(x){
+    x=x*x;
+    return x
+}
+var p=10
+var resultp=square(p);
+console.log(resultp);
+
+function turnnout(machine){
+    machine.isOn=true;
+}
+var computer={
+    isOn:false
+};
+turnnout(computer)
+console.log(computer.isOn);
+
+//returning mutiple values  in a function using a array
+function getNames(){
+    let firstName='johh',
+    LastName='Doe';
+    return[firstName,LastName];
+}
+let name=getNames();
+console.log(name)
+//returning mutiple values in a function using objects
+ function   getStudent(){
+    let first='davis',
+    second='marcie'
+    return{
+        first,
+        second
+    };
+}
+var cue=getStudent();
+console.log(cue);
+
+//javascript function and type
+function  swap(s,y){
+ let temp=s;
+ s=y;
+ y=temp;
+}
+console.log(swap.length)
+let cat={type:'cat',sound:'meow'};
+var  dog={type:"dog" ,sound:'woof'};
+let say=function(greetings){
+    console.log(greetings);
+    //accessing the current this
+    console.log(this.type+'says' + this.sound);
+};
+//the call () method
+function show(){
+    console.log("show function")
+}
+function addz(a,b){
+    return a+b;
+}
+let get=addz.call(this,10,30);
+console.log(get);
+//recursion function :the function that call themselve until they don't anymore
+// function countDown(fromNUmber){
+//     console.log(fromNUmber);
+//     let nextNumber=fromNUmber -1;
+//     if(nextNumber>0){
+//         countDown(nextNumber);
+//     }
+// }
+// countDown(3);
+
+let countDown=function f(fromNUmber){
+    console.log(fromNUmber);
+    let nextNumber=fromNUmber-1;
+    if(nextNumber>0){
+        f(nextNumber);
+    }
+}
+let newYearCountDown=countDown;
+countDown=null;
+newYearCountDown(10);
+ function sumOfDigits(num){
+     if(num==0){
+         return 0;
+     }
+     return num%10 +sumOfDigits(Math.floor(num/10));
+ }
+let agentName='Alicia';
+function greeting(){
+    let message="Shake it off and do your job";
+   function sayHi(){
+       console.log(message);
+   }
+   return sayHi
+}
+let hi=greeting();
+console.log(hi ());
+
+ function greeting1(message1){
+     return function (name1){
+         return message1 +" "+name1;
+     }
+ }
+ let sayHi1=greeting1('Hi');
+ let sayHello=greeting1('Hello');
+ console.log(sayHi1('Joseph'));
+ console.log(sayHello('Joseph'))
+for(var index=1;index<=3; index++){
+ (function(index){
+     setTimeout(function(){
+         console.log('after' + index + 'seconds:' +index);
+     },index*1000);
+ })(index);
+}
+
+                                                                                                                                                                                                                                                                                        
+ 
+
+
+
+
+
+
+
+   </script>
+    
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+body{
+    background-color: rosybrown;
+}
+#content{
+    color: royalblue;
+}
+#pup{
+    border-style: ridge;
+}
+.myStyle{
+    width: 100%;
+    padding: 25px;
+    background-color: coral;
+    color: white;
+    font-size: 25px;
+}

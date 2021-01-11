@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using  the javascript  to change the source of the image</title>
+</head>
+<body>
+    <h1> Welcome to the pentagon</h1>
+ <span onclick="changeImage('/logo.svg')">Contant</span>
+ <span onclick="changeImage('/bg-pattern-top-desktop.svg')">Address Contant</span>
+ <span>Clock</span>
+    <img id="ImgDisp" src="/img4.jpg" alt="">
+<script>
+function changeImage( imageName){
+    image=document.getElementById('ImgDisp');
+    image.src=imageName
+
+}
+
+</script>
+
+
+</body>
+</html>

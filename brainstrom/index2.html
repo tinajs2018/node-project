@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+<div class="container">
+    <form action="" class="form" id="signup">
+        <h1>Sign up form</h1>
+        <div class="form-field error">
+            <label for="username"> Username</label>
+            <input type="text" name="username" id="username" autocomplete="off">
+            <small> username cannot be blank and has at least 3 characters and cannot be longer than 25 characters</small>
+
+        </div>
+
+        <div class="form-field error">
+            <label for="email"> Email:</label>
+            <input type="text" name="emai1" id="email" autocomplete="off">
+            <small> Email is mandatory and valid</small>
+
+        </div>
+
+
+        <div class="form-field success">
+            <label for="password">password </label>
+            <input type="password" name="password" id="password" autocomplete="off">
+            <small> password has eight characters or longer.And it 
+                must contain 1 lowercase  1 uppercase and atleast one special characters in the set(!@#$%^&*)
+            </small>
+
+        </div>
+
+
+
+        <div class="form-field success ">
+            <label for="username">confirm-password </label>
+            <input type="password" name="confirm-password" id="confirm-password" autocomplete="off">
+            <small> The confirm password must be same as password</small>
+
+        </div>
+
+      
+            <div class="form-field">
+                <input type="submit" value="sign up">
+
+            </div>
+
+
+    </form>
+
+</div> 
+    
+    
+    
+<script src="app.js"></script>
+</body>
+</html>

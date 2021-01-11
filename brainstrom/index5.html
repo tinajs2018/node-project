@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS getting child Elements</title>
+</head>
+<body>
+  <ul id="menu">
+      <li class="first">Home</li>
+      <li>Products</li>
+      <li class="current">Customer Support</li>
+      <li>Careers</li>
+      <li>Investors</li>
+      <li>News</li>
+      <li class="last">About us</li>
+
+
+  </ul>  
+
+  <div id="note">
+      javascript textcontent demo
+      <span style="display: none"> This must the hidden text</span>
+
+  </div>
+  l
+
+
+<script>
+
+    let content=document.getElementById('menu');
+   
+    console.log(content.firstElementChild);
+    let content1=document.getElementById('menu');
+    console.log(content1.lastElementChild);
+
+    let menu=document.getElementById('menu');
+    let children=menu.children;
+    console.log(children);
+
+
+    let note=document.getElementById('note');
+    console.log(note.textContent);
+    let node=document.getElementById('note');
+    node.textContent='this is my trip to life back off'
+</script> 
+<img id="pic" src="/bg-intro-desktop.png" alt="">
+<script>
+    var  img=document.getElementById('pic');
+    img.Src="/bg-intro-desktop.png";
+</script>
+
+
+
+</body>
+</html>

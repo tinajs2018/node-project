@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Image sliding effect using javascript</title>
+</head>
+<body>
+  <img name="slider" width="400px " height="200px">
+  <script>
+var i=0;
+var images=[];
+var time=2000;
+images[0]='img14.jpg';
+images[1]='img18.jpg';
+images[2]='img13.jpg';
+images[3]='img7.jpg';
+function changeImg(){
+    document.slider.src=images[i];
+    if(i <images.length -1){
+        i++
+    }else{
+        i=0;
+    }
+    setTimeout('changeImg()',time)
+}
+window.onload=changeImg;
+
+
+
+  </script>
+    
+
+
+</body>
+</html>

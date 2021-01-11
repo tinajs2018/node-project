@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handling in js</title>
+</head>
+<body>
+  <input type="button" value="save" onclick="alert('People are drawning in data searching for knownledge')">
+  <input type="button" value="save1" onclick="showalert()">
+
+  <script>
+      function showalert(){
+          alert("Connecting the dots is the only wy in datascience");
+      }
+
+
+      function add(){
+    let sum=0;
+    for (let i=0;i<arguments.length; i++){
+        sum+=arguments[i];
+    }
+    return sum;
+}
+console.log(add(1,2,3,4,5));
+
+
+let sum=add(23,8);
+console.log( 'sum :',sum);
+
+
+  </script>
+</body>
+</html>
